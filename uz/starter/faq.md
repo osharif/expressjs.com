@@ -28,7 +28,7 @@ Express qaysi ma'lumotlar ombori bilan ishlashni keltirilmagan. Siz hohlagan Nod
 
 [LoopBack](http://loopback.io) ko'ring, Express asosida modellar bilan ishlash uchun yaratilgan freymvork.
 
-## Qanday qilish foydalanuvchini autenfikatsiya qilishim mumkin?
+## Qanday qilib foydalanuvchini autenfikatsiya qilishim mumkin?
 
 Bu ham Express o'ziga olmaydigan qismi hisoblanadi. Siz hohlagan autenfikatsiya tizimini ishlatishingiz mumkin bo'ladi.
 Oddiy username / password sxemasini ishlatish uchun [ushbu misolni](https://github.com/strongloop/express/tree/master/examples/auth) ko'ring.
@@ -48,7 +48,7 @@ app.use(express.static('public'));
 app.use(express.static('files'));
 ~~~
 
-## Statik fayllarni tarqatish qanday qilib manzil prefiksini ko'rsatsam bo'ladi?
+## Statik fayllarni tarqatishda qanday qilib manzil prefiksini ko'rsatsam bo'ladi?
 
 Asosiy Connect "mounting" yordamida "prefiks" aniqlab qaysi middleware ishga tushishini ko'rsatish mumkin bo'ladi.
 Bu usul effektiv ishlaydi huddi prefiks hech qachon manzil qismi bo'lmagandek.
@@ -62,7 +62,7 @@ app.use('/public', express.static('public'));
 ## Siz qanday qilib 404 xatoni qayta ishlaysiz?
 
 Expressda, 404 xatosi, natija xatosi hisoblanmaydi. Shuning uchun ham xatolarni qayta ishlovchi middleware 404ni qayta ishlay olmaydi. Chunki 404 qo'shimcha ish yo'qligidan dalolat beradi;
-Boshqa qilib aytganda, Express hamma oraliq qayta ishlovchi(middleware)  / routerlarni(routes)larni ishga tushuradi,
+Boshqacha qilib aytganda, Express hamma oraliq qayta ishlovchi(middleware)  / routerlarni(routes)larni ishga tushuradi,
 va ularda hech biri ish haqida natija beramangani aniqlanadi.
 Buning uchun siz eng oxirida(hammasidan keyin) 404ni qayta ishlash oraliq qayta ishlovchi ko'rsatishingiz kerak bo'ladi:
 
@@ -75,7 +75,7 @@ app.use(function(req, res, next){
 ## Xato qayta ishlovchisini qanday aniqlaysiz?
 
 Siz xatolarni qayta ishlovchi middlewareni ko'rsatishingiz mumkin, shu bilan qolgan qayta ishlovchisi(middleware)ga
-uchta argumentlar o'rniga to'rtta argument jo'natishingiz kerak; u quyidagicha `(err, req, res, next)`:
+uchta argument o'rniga to'rtta argument jo'natishingiz kerak; u quyidagicha `(err, req, res, next)`:
 
 ~~~js
 app.use(function(err, req, res, next){
@@ -90,4 +90,4 @@ Batafsil ma'lumot uchun [Xatolarni qayta ishlash](/guide/error-handling.html) o'
 
 Siz buni qilishingiz kerak emas! HTMLni `res.render()` orqali "render" qilish kerak emas.
 Agar sizda shunday fayl bo'lsa, `res.sendFile()` ishlating.
-Agar siz ko'pgina bunday fayllarni ishlatsangiz `express.static()` qayta ishlovchisi(middleware)ni ishlatishingiz mumkin.
+Agar siz ko'pgina bunga uxshash fayllarni ishlatsangiz `express.static()` oraliq qayta ishlovchisi(middleware)ni ishlatishingiz mumkin.
