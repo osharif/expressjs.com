@@ -28,7 +28,7 @@ Express qaysi ma'lumotlar ombori bilan ishlashni keltirilmagan. Siz hohlagan Nod
 
 [LoopBack](http://loopback.io) ko'ring, Express asosida modellar bilan ishlash uchun yaratilgan freymvork.
 
-## Qanday qilib foydalanuvchini autenfikatsiya qilishim mumkin?
+## Qanday qilib foydalanuvchini autentifikatsiya qilishim mumkin?
 
 Bu ham Express o'ziga olmaydigan qismi hisoblanadi. Siz hohlagan autenfikatsiya tizimini ishlatishingiz mumkin bo'ladi.
 Oddiy username / password sxemasini ishlatish uchun [ushbu misolni](https://github.com/strongloop/express/tree/master/examples/auth) ko'ring.
